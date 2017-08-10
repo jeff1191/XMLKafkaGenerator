@@ -1,0 +1,8 @@
+<breakfast_menu>
+    <food>
+        <name>##RANDOM_STRING(Belgian Waffles, Strawberry Belgian Waffles, Homestyle Breakfast, French Toast)##</name>
+        <price>##RANDOM_DOUBLE(2.2, 5.5)##</price>
+        <description>whatever...</description>
+        <calories>##RANDOM_INT(200, 800)##</calories>
+    </food>
+</breakfast_menu>
