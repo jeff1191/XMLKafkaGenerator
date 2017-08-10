@@ -27,7 +27,7 @@ class XMLGenerator(xmlTemplate:String, config:String) {
 
     val properties = new Properties()
     // comma separated list of Kafka brokers
-    properties.setProperty("bootstrap.servers", s"${conf.brokers}:${conf.port}")
+    properties.setProperty("bootstrap.servers", s"${conf.broker}:${conf.port}")
     properties.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     properties.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
     properties.put("key-class-type", "java.lang.String")

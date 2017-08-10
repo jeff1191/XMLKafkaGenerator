@@ -9,7 +9,7 @@ import com.typesafe.config.ConfigFactory
   */
 class Conf(configPath:String) {
   val config = ConfigFactory.parseFile(new File(configPath))
-  val brokers=config.getString("brokers")
+  val broker=config.getString("broker")
   val port=config.getInt("port")
   val topic=config.getString("topic")
   val loop=config.getInt("loop")

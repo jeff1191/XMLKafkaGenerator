@@ -4,17 +4,20 @@
 Simple XML generator for Kafka(0.10.0). The project read a xmltokafka.xml template with special labels for generate random messages 
 in string format.
 
-##Configuration
+## Configuration
 
 1. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
 2. `cd XMLKafkaGenerator; mvn package`
-3. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
-##Usage
+3. `mv target/XMLGenToKafka/* ~; cd ~/XMLGenToKafka`
+3. `java -jar XMLKafkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar example.xml application.conf`
+4. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
+
+## Usage
 There is a config file(config.json) generated using mvn, this file is a template that you can modify depending on what you want
 
 application.conf:
 ```
-brokers= "localhost"
+broker= "localhost"
 port= 9092
 topic= "testXML"
 loop= 2
