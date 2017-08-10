@@ -39,11 +39,12 @@ example.xml:
  </breakfast_menu>
  ```
  ##Labels
- Function |  
- ------------- |
- ##RANDOM_INT(x,y)## | 
- ##RANDOM_DOUBLE(x,y)## | 
- ##RANDOM_STRING(x,y,z,..)## |
- ##RANDOM_BOOLEAN()## | 
- ##TIMESTAMP()## | 
+ 
+ |Function |  
+ |------------- |
+ |##RANDOM_INT(x,y)## | 
+ |##RANDOM_DOUBLE(x,y)## | 
+ |##RANDOM_STRING(x,y,z,..)## |
+ |##RANDOM_BOOLEAN()## | 
+ |##TIMESTAMP()## | 
  
