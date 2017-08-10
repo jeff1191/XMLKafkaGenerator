@@ -1,7 +1,7 @@
 # XMLKafkaGenerator
 
 ## Overview
-Simple XML generator for Kafka(0.10.0), this project read a xml template with special labels for generate random messages 
+Simple XML generator for Kafka(0.10.0). The project read a xmltokafka.xml template with special labels for generate random messages 
 in string format.
 
 ##Configuration
@@ -12,21 +12,18 @@ in string format.
 ##Usage
 There is a config file(config.json) generated using mvn, this file is a template that you can modify depending on what you want
 
-config.json:
+application.conf:
 ```
-{
-   "type": "kafka",
-   "broker.server": "localhost",
-   "broker.port": 9092,
-   "topic": "xmltest",
-   "loop": 2,
-   "date_format":"yyyy-MM-dd HH:mm:ss"
- }
+brokers= "localhost"
+port= 9092
+topic= "testXML"
+loop= 2
+date_format="yyyy-MM-dd HH=mm=ss"
 ```
 
 **date_format** is used only for timestamp function
 
-example.xml:
+example.xmltokafka.xml:
 
 ```
 <breakfast_menu>
@@ -38,7 +35,7 @@ example.xml:
      </food>
  </breakfast_menu>
  ```
- ##Labels
+ ## Labels
  
  |Function |  
  |------------- |
@@ -47,4 +44,4 @@ example.xml:
  |##RANDOM_STRING(x,y,z,..)## |
  |##RANDOM_BOOLEAN()## | 
  |##TIMESTAMP()## | 
- 
+

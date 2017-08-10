@@ -1,4 +1,4 @@
-package xml
+package xmltokafka.xml
 
 import java.util.Date
 
