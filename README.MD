@@ -1,7 +1,7 @@
 # XMLKafkaGenerator
 
 ## Overview
-Simple XML generator for Kafka(0.10.0). The project read a xmltokafka.xml template with special labels for generate random messages 
+Simple XML generator to Kafka(0.10.0). The project read a xmltokafka.xml template with special labels for generate random messages 
 in string format.
 
 ## Configuration
