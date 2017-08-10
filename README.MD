@@ -6,11 +6,11 @@ in string format.
 
 ## Configuration
 
-1. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
-2. `cd XMLKafkaGenerator; mvn package`
-3. `mv target/XMLGenToKafka/* ~; cd ~/XMLGenToKafka`
-3. `java -jar XMLKafkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar example.xml application.conf`
-4. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
+1. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
+2. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
+3. `cd XMLKafkaGenerator; mvn package`
+4. `mv target/XMLGenToKafka/* ~; cd ~/XMLGenToKafka`
+5. `java -jar XMLKafkaGenerator-1.0-SNAPSHOT-jar-with-dependencies.jar example.xml application.conf`
 
 ## Usage
 There is a config file(config.json) generated using mvn, this file is a template that you can modify depending on what you want
