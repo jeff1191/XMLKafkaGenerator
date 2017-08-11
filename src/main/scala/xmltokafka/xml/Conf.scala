@@ -14,4 +14,5 @@ class Conf(configPath:String) {
   val topic=config.getString("topic")
   val loop=config.getInt("loop")
   val date_format=config.getString("date_format")
+  val delay=config.getString("delay")
 }

@@ -67,6 +67,7 @@ class XMLGenerator(xmlTemplate:String, config:String) {
       val record = new ProducerRecord(conf.topic, "key", message)
       producer.send(record)
       i = i + 1
+      Thread.sleep(conf.delay.toInt)
     }
   }
 
