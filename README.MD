@@ -3,7 +3,7 @@
 ## Overview
 Simple XML generator to Kafka. The project reads an .xml with special tags to generate random messages
  in string format. XMLKafkaGenerator is built for 0.10.0 version, if you want to play with another version 
- you would have to change the version in pom and surely it will works
+ you would have to change the version in pom and surely it will work
 ## Configuration
 Unix:
 1. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
