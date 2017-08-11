@@ -1,18 +1,28 @@
 # XMLKafkaGenerator
 
 ## Overview
-Simple XML generator to Kafka(0.10.0). The project read a .xml with special labels for generate random messages 
-in string format.
-
+Simple XML generator to Kafka. The project reads an .xml with special tags to generate random messages
+ in string format. XMLKafkaGenerator is built for 0.10.0 version, if you want to play with another version 
+ you would have to change the version in pom and surely it will works
 ## Configuration
+Unix:
 1. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
 2. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
 3. `cd XMLKafkaGenerator; mvn package`
-4. `mv target/XMLKafkaGenerator/*.* ~; cd ~/XMLKafkaGenerator`
+4. `mv target/XMLKafkaGenerator ~; cd ~/XMLKafkaGenerator`
 5. `java -jar XMLKafkaGenerator-v1.0-SNAPSHOT.jar example.xml application.conf`
 
+Windows OS:
+1. `bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
+2. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
+3. `cd XMLKafkaGenerator & mvn package`
+4. `move target\XMLKafkaGenerator %USERPROFILE% & cd %USERPROFILE%\XMLKafkaGenerator`
+5. `java -jar XMLKafkaGenerator-v1.0-SNAPSHOT.jar example.xml application.conf`
+
+You can check messages using kafka-console-consumer. 
 ## Usage
-There is a config file(config.json) generated using mvn, this file is a template that you can modify depending on what you want
+There is a config file(config.json)that you can modify depending on what you want, 
+moreover it includes an example(example.xml) 
 
 application.conf:
 ```
