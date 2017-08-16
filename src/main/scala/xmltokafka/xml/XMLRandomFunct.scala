@@ -7,7 +7,7 @@ import java.util.Date
   */
 object XMLRandomFunct {
 
-  val rnd = new scala.util.Random
+  private val rnd = new scala.util.Random
 
   def randomString(names:Array[String]): String ={
     val random_index = rnd.nextInt(names.length)

@@ -4,24 +4,27 @@ import java.text.SimpleDateFormat
 import java.util.{Date, Properties}
 
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
+import org.slf4j.LoggerFactory
 
 /**
   * Created by root on 7/28/17.
   */
 class XMLGenerator(xmlTemplate:String, config:String) {
-  val generalPattern = """.*>##(.*)##<.*""".r
+  private val generalPattern = """.*>##(.*)##<.*""".r
 
-  val timestampPattern =""".*##TIMESTAMP\((.*)\)##.*""".r
-  val intPattern =""".*##RANDOM_INT\((\d+.*\d+)\)##.*""".r
-  val stringPattern =""".*##RANDOM_STRING\((.*)\)##.*""".r
-  val doublePattern =""".*##RANDOM_DOUBLE\((\d+.*\d+)\)##.*""".r
-  val booleanPattern =""".*##RANDOM_BOOLEAN\((.*)\)##.*""".r
+  private val timestampPattern =""".*##TIMESTAMP\((.*)\)##.*""".r
+  private val intPattern =""".*##RANDOM_INT\((\d+.*\d+)\)##.*""".r
+  private val stringPattern =""".*##RANDOM_STRING\((.*)\)##.*""".r
+  private val doublePattern =""".*##RANDOM_DOUBLE\((\d+.*\d+)\)##.*""".r
+  private val booleanPattern =""".*##RANDOM_BOOLEAN\((.*)\)##.*""".r
 
-  val source = scala.io.Source.fromFile(xmlTemplate)
+  private val source = scala.io.Source.fromFile(xmlTemplate)
 
-  var template = source.getLines() mkString "\n"
+  private var template = source.getLines() mkString "\n"
 
-  val conf = new Conf(config)
+  private val conf = new Conf(config)
+
+  private val logger = LoggerFactory.getLogger(getClass)
 
   def start(): Unit ={
 
@@ -66,6 +69,7 @@ class XMLGenerator(xmlTemplate:String, config:String) {
 
       val record = new ProducerRecord(conf.topic, "key", message)
       producer.send(record)
+      logger.info(message)
       i = i + 1
       Thread.sleep(conf.delay.toInt)
     }

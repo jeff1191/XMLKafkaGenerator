@@ -6,7 +6,7 @@ Simple XML generator to Kafka. The project reads an .xml with special tags to ge
  you would have to change the version in pom and surely it will work
 ## Configuration
 Unix:
-1. `bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
+1. `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
 2. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
 3. `cd XMLKafkaGenerator; mvn package`
 4. `mv target/XMLKafkaGenerator ~; cd ~/XMLKafkaGenerator`
@@ -28,7 +28,7 @@ application.conf:
 ```
 broker= "localhost"
 port= 9092
-topic= "testXML"
+topic= "xmltest"
 loop= 5
 delay=1000
 date_format="yyyy-MM-dd HH=mm=ss"
