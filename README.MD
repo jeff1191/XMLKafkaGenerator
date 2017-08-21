@@ -9,14 +9,14 @@ Unix:
 1. `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
 2. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
 3. `cd XMLKafkaGenerator; mvn package`
-4. `mv target/XMLKafkaGenerator ~; cd ~/XMLKafkaGenerator`
+4. `mv target/XMLKafkaGeneratorApp ~; cd ~/XMLKafkaGeneratorApp`
 5. `java -jar XMLKafkaGenerator-v1.0-SNAPSHOT.jar example.xml application.conf`
 
 Windows OS:
 1. `bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic xmltest`
 2. `git clone https://github.com/jeff1191/XMLKafkaGenerator` 
 3. `cd XMLKafkaGenerator & mvn package`
-4. `move target\XMLKafkaGenerator %USERPROFILE% & cd %USERPROFILE%\XMLKafkaGenerator`
+4. `move target\XMLKafkaGeneratorApp %USERPROFILE% & cd %USERPROFILE%\XMLKafkaGeneratorApp`
 5. `java -jar XMLKafkaGenerator-v1.0-SNAPSHOT.jar example.xml application.conf`
 
 You can check messages using kafka-console-consumer. 

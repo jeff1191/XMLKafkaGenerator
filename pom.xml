@@ -110,10 +110,10 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <mkdir dir="target/XMLKafkaGenerator"/>
-                                <copy file="${project.basedir}/conf/application.conf" tofile="${basedir}/target/XMLKafkaGenerator/application.conf"/>
-                                <copy file="${project.basedir}/conf/example.xml" tofile="${basedir}/target/XMLKafkaGenerator/example.xml"/>
-                                <copy file="${project.basedir}/target/XMLKafkaGenerator-v${project.version}.${project.packaging}" tofile="${project.basedir}/target/XMLKafkaGenerator/XMLKafkaGenerator-v${project.version}.${project.packaging}"/>
+                                <mkdir dir="target/XMLKafkaGeneratorApp"/>
+                                <copy file="${project.basedir}/conf/application.conf" tofile="${basedir}/target/XMLKafkaGeneratorApp/application.conf"/>
+                                <copy file="${project.basedir}/conf/example.xml" tofile="${basedir}/target/XMLKafkaGeneratorApp/example.xml"/>
+                                <copy file="${project.basedir}/target/XMLKafkaGenerator-v${project.version}.${project.packaging}" tofile="${project.basedir}/target/XMLKafkaGeneratorApp/XMLKafkaGenerator-v${project.version}.${project.packaging}"/>
                             </tasks>
                         </configuration>
                     </execution>
