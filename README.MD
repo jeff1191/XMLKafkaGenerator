@@ -29,12 +29,14 @@ application.conf:
 broker= "localhost"
 port= 9092
 topic= "xmltest"
-loop= 5
+frecuency= 5
 delay=1000
 date_format="yyyy-MM-dd HH=mm=ss"
 ```
 
 **date_format** is used only for timestamp function
+
+**use frequency=-1** if you want to generate a infinite streaming using random data
 
 example.xml:
 

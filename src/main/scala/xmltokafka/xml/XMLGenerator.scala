@@ -52,7 +52,7 @@ class XMLGenerator(xmlTemplate:String, config:String) {
     }.toList
 
     var i=0
-    while ( i != conf.loop){
+    while ( i != conf.frequency){
       var message = template
       ret.foreach { x =>
 

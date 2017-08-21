@@ -12,7 +12,7 @@ class Conf(configPath:String) {
   val broker=config.getString("broker")
   val port=config.getInt("port")
   val topic=config.getString("topic")
-  val loop=config.getInt("loop")
+  val frequency=config.getInt("frequency")
   val date_format=config.getString("date_format")
   val delay=config.getString("delay")
 }
